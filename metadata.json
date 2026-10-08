@@ -1,0 +1,6 @@
+{
+  "name": "Estúdio Cota",
+  "description": "Estúdio de arquitetura e reforma. Precisão técnica, estrutura em concreto e rigor geométrico.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

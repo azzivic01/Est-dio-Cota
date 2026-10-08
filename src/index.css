@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Archivo', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  /* Cores */
+  --tema-color-bg: #ECECE8;
+  --tema-color-surface: #FFFFFF;
+  --tema-color-border: #C9C9C3;
+  --tema-color-text: #111111;
+  --tema-color-text-muted: #55554F;
+  --tema-color-accent: #1D3FD9;
+  --tema-color-accent-ink: #1D3FD9;
+  --tema-color-on-accent: #FFFFFF;
+  --tema-color-deco-1: #1D3FD9;
+  --tema-color-deco-2: #111111;
+  --tema-color-deco-3: #C9C9C3;
+
+  /* Fontes */
+  --tema-font-display: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tema-font-body: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tema-font-label: 'JetBrains Mono', monospace;
+  --tema-font-mono: 'JetBrains Mono', monospace;
+
+  /* Forma */
+  --tema-radius: 0px;
+  --tema-radius-lg: 0px;
+  --tema-border-width: 1px;
+  --tema-shadow-hard: none;
+
+  /* Texto */
+  --tema-label-transform: uppercase;
+  --tema-label-tracking: 0.08em;
+  --tema-display-transform: none;
+
+  /* Movimento */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 700ms;
+  --motion-duration-cinematic: 1000ms;
+  --motion-easing-base: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-stagger: 80ms;
+}
+
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+  font-family: var(--tema-font-body);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+}
+
+/* Accessible focus ring: 2px solid in accent-ink with offset */
+:focus-visible {
+  outline: 2px solid var(--tema-color-accent-ink);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference override */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
